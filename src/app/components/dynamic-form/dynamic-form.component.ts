@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
-import { QuestionBase } from './question-base';
-import { QuestionControlService } from './question-control.service';
+import { QuestionBase } from '../../types/question-base';
+import { QuestionControlService } from '../../services/question-control.service';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -10,7 +10,6 @@ import { QuestionControlService } from './question-control.service';
   providers: [ QuestionControlService ]
 })
 export class DynamicFormComponent implements OnInit {
-
   @Input() questions: QuestionBase<any>[] = [];
   form: FormGroup;
   payLoad = '';
