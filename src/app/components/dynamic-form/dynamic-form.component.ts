@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 import { QuestionBase } from '../../types/question-base';
@@ -17,6 +17,10 @@ export class DynamicFormComponent implements OnInit {
   constructor(private qcs: QuestionControlService) {  }
 
   ngOnInit() {
+    this.form = this.qcs.toFormGroup(this.questions);
+  }
+
+  onQuestionChange() {
     this.form = this.qcs.toFormGroup(this.questions);
   }
 
