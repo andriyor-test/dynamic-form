@@ -1,8 +1,8 @@
-import { Injectable }       from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import { DropdownQuestion } from './question-dropdown';
-import { QuestionBase }     from './question-base';
-import { TextboxQuestion }  from './question-textbox';
+import { QuestionBase } from './question-base';
+import { TextboxQuestion } from './question-textbox';
 
 @Injectable()
 export class QuestionService {
@@ -11,7 +11,7 @@ export class QuestionService {
   // TODO: make asynchronous
   getQuestions() {
 
-    let questions: QuestionBase<any>[] = [
+    const questions: QuestionBase<any>[] = [
 
       new DropdownQuestion({
         key: 'brave',
